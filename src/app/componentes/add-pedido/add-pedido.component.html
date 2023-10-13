@@ -1,0 +1,88 @@
+<p-sidebar [(visible)]="display" [showCloseIcon]="true" (onHide)="close()" position="right" [style]="{width: '42vw'}" [modal]="true" [blockScroll]="false"
+    [dismissible]="false" [blockScroll]="true" [modal]="true">
+
+    <div style="position: relative; height: calc(100vh - 50px);">
+     
+        <div style="overflow-y:scroll; height: calc(100vh - 300px); border: 1px solid #f1f1f1;">
+          
+            <div class="pedido-produto-item" *ngFor="let produto of produtos">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="pedido-produto-item-descricao">{{produto?.nome}}</span>
+                    <span class="pedido-produto-preco">{{produto?.preco}}</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="pedido-produto-obs">Ao ponto</small>
+                    <div>
+
+                        <button pButton type="button" icon="pi pi-pencil" 
+                            class="p-button-raised p-button-rounded p-button-sm btn-menu"></button> &nbsp;
+                        <button pButton type="button" icon="pi pi-trash" (click)="removerItem(produto.id)"
+                            class="p-button-raised p-button-rounded  p-button-sm p-button-danger"></button>
+                    </div>
+                </div>
+            </div>
+          
+
+            <!-- <button (click)="close()" type="button" style="position: absolute; right:0; top: -10px;border:none; background-color: transparent;"><i class="pi pi-times-circle"></i></button> -->
+        </div>
+
+        <div class="" style="position: absolute; bottom: 0; width: 100%; height: 250px; background-color: #f5f8fd; padding: 1rem;">
+            <div class="d-flex justify-content-between" style="font-size: 18px; padding: 1rem;">
+                <span>2 itens no pedido</span>
+                <span>SubTotal: 100,00</span>
+            </div>
+
+            <button (click)="close()" style="width: 100%; border: 2px solid var(--main-color); "
+                class="btn btn-primary btn-menu-branco">Selecionar mais itens</button> <br>
+            <button (click)="enviarPedido()" style="width: 100%; margin-top: 1rem;"
+                class="btn btn-primary btn-menu">Enviar Pedido</button>
+
+
+        </div>
+    </div>
+
+
+
+</p-sidebar>
+
+<p-dialog header="Title" [(visible)]="displayFinalizado" [modal]="true" [style]="{width: '35vw'}">
+    <div class="d-flex justify-content-center align-items-center flex-column px-3 py-3">
+        <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+        <p>Seu pedido está sendo processado.</p>
+    </div>
+</p-dialog>
+
+<p-dialog header="Title" [(visible)]="displayErro" [modal]="true" [style]="{width: '35vw'}">
+    <div class="d-flex justify-content-center align-items-center flex-column px-3 py-3">
+        <i class="pi pi-times-circle text-danger" style="font-size: 2rem"></i>
+        <p>Oops, um erro ocorreu</p>
+
+        <div class="d-flex align-items-center justify-content-around" style="width: 350px;">
+
+
+            <button class="btn btn-primary btn-menu-branco" (click)="close()">Cancelar</button>
+
+
+            <button class="btn btn-primary btn-menu" (click)="enviarPedido(true)">Tentar Novamente</button>
+
+        </div>
+    </div>
+</p-dialog>
+<p-dialog header="Title" [(visible)]="displaySucesso" [modal]="true" [style]="{width: '35vw'}">
+    <div class="d-flex justify-content-center align-items-center flex-column px-3 py-3">
+        <i class="pi pi-check text-success" style="font-size: 3rem"></i>
+      
+        <p class="text-center">Pedido enviado com sucesso</p>
+
+        <div class="d-flex align-items-center justify-content-stretch">
+
+
+            <button style="width: 100%;" class="btn btn-primary btn-menu" (click)="close()">Fechar</button>
+
+        </div>
+    </div>
+</p-dialog>
+
+
+<!-- 
+<p-toast></p-toast> -->

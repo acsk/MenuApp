@@ -1,0 +1,73 @@
+<p-sidebar [(visible)]="display" [fullScreen]="true" (onHide)="close()">
+
+
+    <div style="position: relative; height: calc(100vh - 40px);">
+        <div style="overflow-y:scroll;" class="px-3 py-3">
+            <h1>Minha Conta</h1>
+            <hr>
+            <div class="pedido-produto-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="pedido-produto-item-descricao">1x Filé de Panga (Pangasius)</span>
+                    <span class="pedido-produto-preco">R$ 50,00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="pedido-produto-obs">Ao ponto</small>
+
+                </div>
+            </div>
+            <div class="pedido-produto-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="pedido-produto-item-descricao">1x Filé de Panga (Pangasius)</span>
+                    <span class="pedido-produto-preco">R$ 50,00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="pedido-produto-obs">Ao ponto</small>
+
+                </div>
+            </div>
+            <div class="pedido-produto-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="pedido-produto-item-descricao">1x Filé de Panga (Pangasius)</span>
+                    <span class="pedido-produto-preco">R$ 50,00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="pedido-produto-obs">Ao ponto</small>
+
+                </div>
+            </div>
+            <div class="pedido-produto-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="pedido-produto-item-descricao">1x Filé de Panga (Pangasius)</span>
+                    <span class="pedido-produto-preco">R$ 50,00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="pedido-produto-obs">Ao ponto</small>
+
+                </div>
+            </div>
+
+
+            <!-- <button (click)="close()" type="button" style="position: absolute; right:0; top: -10px;border:none; background-color: transparent;"><i class="pi pi-times-circle"></i></button> -->
+        </div>
+
+        <div class="" style="position: absolute; bottom: 0; width: 100%; background-color: #f5f8fd; padding: 1rem;">
+            <div class="d-flex justify-content-between" style="font-size: 18px; padding: 1rem;">
+                <span>2 itens no pedido</span>
+                <span>SubTotal: 200,00</span>
+            </div>
+
+            <div class="d-flex justify-content-around align-items-end">
+                <button (click)="close" style="width: 48%; border: 2px solid var(--main-color); " (click)="close()"
+                    class="btn btn-primary btn-menu-branco">Voltar</button> <br>
+                <button (click)="close()" style="width: 48%; margin-top: 1rem;" class="btn btn-primary btn-menu">Fechar
+                    Conta</button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+</p-sidebar>

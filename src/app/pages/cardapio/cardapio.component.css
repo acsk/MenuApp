@@ -1,0 +1,97 @@
+::ng-deep .p-dialog .p-dialog-header {
+  display: none;
+}
+
+::ng-deep .p-inputnumber-buttons-horizontal .p-inputnumber-input {
+    order: 2;
+    border-radius: 0;
+    text-align: center;
+    font-size: 2.3rem;
+    width: 105px;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 1.1rem;
+
+  line-height: 1.9rem;
+  text-align: center;
+}
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -1px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.item {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 25px;
+}
+.item-foto > img {
+  object-fit: cover;
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.item-descricao {
+  padding: 1rem;
+}
+
+.item-preco {
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+.item-selecionado {
+
+  height: 100%;
+}
+.item-selecionado-etapa {
+  width: 400px;
+  background-color: #ebebeb;
+ 
+}
+.item-selecionado-opcionais{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.item-selecionado-etapa > img {
+  object-fit: cover;
+  height: 250px;
+  width: 400px;
+  border-radius: 10px;
+}
+.item-selecionado-opcionais-i{
+    padding: 9px;
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
+    background-color: #f0f0f0;
+    margin-bottom: 7px;
+}
+.item-etapa{
+    background-color: rgba(0, 0, 0, 0.078);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: var(--main-color);
+    background: var(--main-color);
+}

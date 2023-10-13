@@ -1,0 +1,88 @@
+
+<p-dialog [modal]="true" [closeOnEscape]="false" [(visible)]="display" [blockScroll]="true"
+    [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '75vw',height:'75vh'}">
+    <div class="item-selecionado d-flex" style="position: relative;">
+
+        <div class="item-selecionado-etapa " style="position: relative;">
+            <img [src]="produtoSelecionado?.img" alt="">
+            <h2>{{produtoSelecionado?.nome}}</h2>
+            <div class="d-flex flex-column px-3">
+
+                <div class="d-flex justify-content-between align-items-center item-etapa ">
+                    <span><i class="pi pi-check"></i> Escolha</span> <button (click)="choose(1)" pButton type="button" icon="pi pi-pencil" class="p-button-raised p-button-rounded p-button-sm btn-menu"></button>
+                </div>
+                <div class="d-flex justify-content-between align-items-center item-etapa ">
+                    <span><i class="pi pi-check"></i> Escolha</span> <button (click)="choose(2)" pButton type="button" icon="pi pi-pencil" class="p-button-raised p-button-rounded p-button-sm btn-menu"></button>
+                </div>
+                <div class="d-flex justify-content-between align-items-center item-etapa ">
+                    <span><i class="pi pi-check"></i> Quantidade</span> <button (click)="choose(3)" pButton type="button" icon="pi pi-pencil" class="p-button-raised p-button-rounded p-button-sm btn-menu"></button>
+                </div>         
+
+
+            </div>
+            <span
+                style="position: absolute; bottom: 0; text-align: center; padding: 1rem; background-color: #ccc; width: 100%;">Subtotal:
+                R$ 45,00</span>
+        </div>
+
+        <div class="item-selecionado-opcionais px-3 py-2" style="position: relative;">
+
+            <div *ngIf="etapa == 1">
+
+                <span>Escolha {{etapa}}:</span>
+
+                <div class="d-flex flex-column">
+                    <div class="item-selecionado-opcionais-i">
+                        <p-checkbox name="groupname" value="val1" label="Arroz Biro Biro"
+                            ngModel="selectedValues"></p-checkbox>
+
+                    </div>
+                    <div class="item-selecionado-opcionais-i">
+                        <p-checkbox name="groupname" value="val1" label="Pure de batatinha"
+                            ngModel="selectedValues"></p-checkbox>
+
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="etapa == 2">
+
+                <span>Escolha {{etapa}}:</span>
+
+                <div class="d-flex flex-column">
+                    <div class="item-selecionado-opcionais-i">
+                        <p-checkbox name="groupname" value="val1" label="Sobremesa do Chef"
+                            ngModel="selectedValues"></p-checkbox>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div *ngIf="etapa == 3">
+
+
+                <div class="d-flex flex-column align-items-center justify-content-center" style="height: 500px">
+                    <span>Escolha a quantidade de</span>
+                    <h1>{{produtoSelecionado?.nome}}</h1>
+
+                    <p-inputNumber mode="decimal" [showButtons]="true" buttonLayout="horizontal"
+                        spinnerMode="horizontal" decrementButtonClass="btn btn-menu"
+                        incrementButtonClass=" btn btn-menu" incrementButtonIcon="pi pi-plus"
+                        decrementButtonIcon="pi pi-minus"></p-inputNumber>
+
+                </div>
+            </div>
+
+
+            <button class="btn btn-primary btn-menu"
+                style="position: absolute; bottom: 10px; height: 60px; display: block; width: calc(100% - 40px);">{{etapa == 3 ? "Adicionar ao pedido" : "Avançar"}}</button>
+           
+                <button class="btn btn-primary btn-menu" (click)="addPedido()"
+                style="position: absolute; bottom: 10px; height: 60px; display: block; width: calc(100% - 40px);">Adicionar ao pedido</button>
+        </div>
+        <button (click)="close()" type="button" style="position: absolute; right:0; top: 0;border:none; background-color: transparent;"><i class="pi pi-times-circle"></i></button>
+    </div>
+    
+</p-dialog>
+
+<app-add-pedido [display]="displayPedido"  [addProdutoPedido]="item" (closedModalPedido)="closedModalPedido()" ></app-add-pedido>

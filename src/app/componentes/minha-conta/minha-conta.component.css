@@ -1,0 +1,8 @@
+.pedido-produto-item{
+    border-bottom: 1px dashed var(--text-color-light);
+}
+h1{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}

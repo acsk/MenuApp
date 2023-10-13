@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "nome": "Filé de Panga (Pangasius)",
+            "img": "assets/prato_1.jpeg",
+            "descricao": "O filé de pangasius, também conhecido como filé de panga, apresenta cor branca, textura firme e sabor suave. Não tem espinhas, é vendido limpo e em filés.",
+            "preco": "R$ 50,00",
+            "categoria": "prato"
+        },
+        {
+            "id": 2,
+            "nome": "Filé de Panga (Pangasius)",
+            "img": "assets/prato_2.jpeg",
+            "descricao": "O filé de pangasius, também conhecido como filé de panga, apresenta cor branca, textura firme e sabor suave. Não tem espinhas, é vendido limpo e em filés.",
+            "preco": "R$ 34,00",
+            "categoria": "prato"
+        },
+        {
+            "id": 3,
+            "nome": "Pain au Chocolat",
+            "img": "assets/sobremesa_2.jpeg",
+            "descricao": "Os doces franceses são famosos por sua delicadeza, requinte e elegância. Com suas texturas e sabores únicos",
+            "preco": "R$ 10,00",
+            "categoria": "sobremesa"
+        },
+        {
+            "id": 4,
+            "nome": "Pain au Chocolat",
+            "img": "assets/sobremesa_1.jpeg",
+            "descricao": "Os doces franceses são famosos por sua delicadeza, requinte e elegância. Com suas texturas e sabores únicos",
+            "preco": "R$ 10,00",
+            "categoria": "sobremesa"
+        },
+        {
+            "id": 5,
+            "nome": "Vinho",
+            "img": "https://media.seudinheiro.com/cdn-cgi/image/fit=contain,width=715&,format=auto/uploads/2019/09/shutterstock_218626861-628x353.jpg",
+            "descricao": "Os doces franceses são famosos por sua delicadeza, requinte e elegância. Com suas texturas e sabores únicos",
+            "preco": "R$ 10,00",
+            "categoria": "drink"
+        },
+        {
+            "id": 6,
+            "nome": "Whisky Jack Daniels 375ml",
+            "img": "https://emporiodarkdebebidas.com.br/wp-content/uploads/2023/07/IMG_2757-scaled.jpeg",
+            "descricao": "Hoje o Jack Daniel’s Tennessee Old Nº7 é o whiskey mais vendido no mundo. Baseado na cidade de Lynchburg, Tennessee, Estados Unidos, desde sua fundação em 1866 por Jack Daniel, o lendário Tennessee Whiskey",
+            "preco": "R$ 10,00",
+            "categoria": "drink"
+        }
+    ]
+}

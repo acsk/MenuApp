@@ -1,0 +1,31 @@
+
+.pedido-produto-item{
+
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--text-color-light);
+
+}
+.pedido-produto-item-descricao{
+    font-weight: 400;
+    font-size: .9rem;
+   
+}
+.pedido-produto-preco{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--text-color-dark)
+   
+}
+
+.pedido-produto-obs{
+    color: var(--text-color-light)
+}
+
+::ng-deep .p-sidebar .p-sidebar-header {
+    padding: 0px;
+}
+
+::ng-deep .p-sidebar .p-sidebar-content {
+    padding: 0rem;
+}
