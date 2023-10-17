@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/interfaces/produto';
+import { ProdutoModel } from 'src/app/model/produtoModel';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ProdutosService } from 'src/app/services/produtos.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  produtos:Produto[]=[]
+  produtos:Array<ProdutoModel>=[]
   addProdutoDisplay:boolean = false
   addPedidoDisplay:boolean = false
   displayMinhaConta:boolean = false
@@ -17,10 +18,15 @@ export class HomeComponent implements OnInit {
   constructor(private httpProduto: ProdutosService) { }
 
   ngOnInit(): void {
-    this.httpProduto.getProdutos().then(data => {
-      this.produtos = data
-     console.log(this.produtos)
+    this.httpProduto.getProdutos().subscribe({
+      next: (data) =>  {
+        this.produtos = data
+
+        console.log(data)
+      }
     })
+    
+
     
   }
   openAddPedido(){
@@ -33,7 +39,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  add(data:Produto){
+  add(data:ProdutoModel){
    
     this.addProdutoDisplay = true
     this.addProduto = data

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
-import {SidebarModule} from 'primeng/sidebar';
-import {CheckboxModule} from 'primeng/checkbox';
-import {InputNumberModule} from 'primeng/inputnumber';
-import {ToastModule} from 'primeng/toast';
-import {RippleModule} from 'primeng/ripple';
+import { SidebarModule } from 'primeng/sidebar';
+import { CheckboxModule } from 'primeng/checkbox';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { ToastModule } from 'primeng/toast';
+import { RippleModule } from 'primeng/ripple';
 
-import {DialogModule} from 'primeng/dialog';
+import { DialogModule } from 'primeng/dialog';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -23,8 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DialogModule,
     CheckboxModule,
     InputNumberModule,
-   // ToastModule,
-    RippleModule
+    ToastModule,
+    RippleModule,
+    ConfirmDialogModule
   ],
   exports: [
     ButtonModule,
@@ -34,8 +36,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CheckboxModule,
     InputNumberModule,
     BrowserAnimationsModule,
-   // ToastModule,
-    RippleModule
+    ToastModule,
+    RippleModule,
+    ConfirmDialogModule
   ]
 })
 export class PrimeModule { }

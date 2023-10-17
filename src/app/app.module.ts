@@ -12,6 +12,9 @@ import { AddProdutoComponent } from './componentes/add-produto/add-produto.compo
 import { AddPedidoComponent } from './componentes/add-pedido/add-pedido.component';
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { MinhaContaComponent } from './componentes/minha-conta/minha-conta.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducerCart } from './store/cart/cart.reducer';
+import { pedidoReducer } from './store/pedido/pedido.reducer';
 
 
 
@@ -31,11 +34,12 @@ import { MinhaContaComponent } from './componentes/minha-conta/minha-conta.compo
     AsideModule,
     PrimeModule,
     HttpClientModule,
-    
+     StoreModule.forRoot({ count: counterReducerCart, pedido: pedidoReducer })   
     
     
   ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
